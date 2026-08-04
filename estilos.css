@@ -148,52 +148,58 @@ body.dark-mode footer { border-top: 2px solid #333; }
         padding: 10px;
     }
     .nav ul.active { display: flex; }
-    /* Ícono del menú móvil */
+    
+ /* Ícono del menú móvil */
 .menu-toggle {
-    display: none;
+    display: none; /* Oculto en escritorio */
     font-size: 18px;
     cursor: pointer;
-    color: #fff;
-    background: #f8cce0;
+    color: #000;
+    background: #f8cce0; /* Rosa claro */
     padding: 6px 12px;
     border-radius: 8px;
+    font-weight: bold;
     transition: background 0.3s;
 }
 
 .menu-toggle:hover {
-    background: #d94f7c; /* Rosa oscuro al pasar */
+    background: #d94f7c; /* Rosa oscuro */
+    color: #fff;
 }
 
 /* Menú desplegable móvil */
 @media (max-width: 768px) {
     .nav ul {
-    display: none;
-    flex-direction: column;
-    background: #f8cce0; /* Rosa claro */
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
+        display: none;
+        flex-direction: column;
+        background: #f8cce0;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
 
-.nav ul.active {
-    display: flex; /* Esto hace que aparezca */
-}
+    .nav ul.active {
+        display: flex; /* Se muestra al tocar el botón */
+    }
 
-.nav a {
-    color: #000;
-    font-size: 1.1em;
-    padding: 10px;
-    border-radius: 5px;
-}
+    .nav a {
+        color: #000;
+        font-size: 1.1em;
+        padding: 10px;
+        border-radius: 5px;
+    }
 
-.nav a:hover,
-.nav a.active {
-    background: #d94f7c; /* Rosa oscuro */
-    color: #fff;
-}
-}
+    .nav a:hover,
+    .nav a.active {
+        background: #d94f7c;
+        color: #fff;
+    }
 
+    .menu-toggle {
+        display: block; /* Visible en móvil */
+    }
+}
 }
