@@ -114,3 +114,90 @@ body.dark-mode footer { border-top: 2px solid #333; }
     }
     .menu-toggle:hover { background: #d94f7c; color: #fff; }
 }
+
+        /* Galería responsive */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+ .card-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    overflow: hidden;
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.card img  {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* recorta proporcionalmente */
+
+}
+
+
+
+
+.card h3 {
+    margin: 15px 0 10px;
+    color: #d94f7c;
+}
+
+.card p {
+    padding: 0 15px 15px;
+    font-size: 0.95em;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Tarjeta destacada */
+.card.highlight {
+    grid-column: span 2; /* ocupa más ancho en escritorio */
+    background: #f8cce0;
+}
+
+.img-small {
+    max-width: 800px;
+    height: auto;
+}
+
+
+/* Ajuste específico para celular */
+@media (max-width: 768px) {
+    .card-gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 por fila */
+    }
+    .card img {
+        height: auto;
+        max-height: 180px; /* límite para que no se corten */
+        object-fit: cover;
+    }
+
+   .img-small {
+        max-width: 500px;
+    }
+
+}
+
