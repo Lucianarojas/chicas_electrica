@@ -114,13 +114,13 @@ body.dark-mode footer { border-top: 2px solid #333; }
     }
     .menu-toggle:hover { background: #d94f7c; color: #fff; }
     
-    
     .card-gallery {
-        grid-template-columns: repeat(2, 1fr); /* 2 por fila */
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en móvil */
     }
     .card img {
-        height: auto;
-        max-height: 180px; /* límite para que no se corten */
+        width: 100%;
+        height: auto;       /* mantiene proporción */
+        max-height: 180px;  /* más chicas en celular */
         object-fit: cover;
     }
 
@@ -130,9 +130,9 @@ body.dark-mode footer { border-top: 2px solid #333; }
 
 }
 
+ /* Galería responsive */
 
-        /* Galería responsive */
-        .gallery {
+           .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 15px;
@@ -148,6 +148,7 @@ body.dark-mode footer { border-top: 2px solid #333; }
         .gallery img:hover {
             transform: scale(1.05);
         }
+
  .card-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -166,13 +167,11 @@ body.dark-mode footer { border-top: 2px solid #333; }
 
 .card img  {
     width: 100%;
-    height: 250px;
+    height: auto;
+    max-height: 250px;
     object-fit: cover; /* recorta proporcionalmente */
 
 }
-
-
-
 
 .card h3 {
     margin: 15px 0 10px;
