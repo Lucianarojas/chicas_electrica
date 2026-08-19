@@ -113,7 +113,23 @@ body.dark-mode footer { border-top: 2px solid #333; }
         transition: background 0.3s;
     }
     .menu-toggle:hover { background: #d94f7c; color: #fff; }
+    
+    
+    .card-gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 por fila */
+    }
+    .card img {
+        height: auto;
+        max-height: 180px; /* límite para que no se corten */
+        object-fit: cover;
+    }
+
+   .img-small {
+        max-width: 500px;
+    }
+
 }
+
 
         /* Galería responsive */
         .gallery {
@@ -181,23 +197,5 @@ body.dark-mode footer { border-top: 2px solid #333; }
 .img-small {
     max-width: 800px;
     height: auto;
-}
-
-
-/* Ajuste específico para celular */
-@media (max-width: 768px) {
-    .card-gallery {
-        grid-template-columns: repeat(2, 1fr); /* 2 por fila */
-    }
-    .card img {
-        height: auto;
-        max-height: 180px; /* límite para que no se corten */
-        object-fit: cover;
-    }
-
-   .img-small {
-        max-width: 500px;
-    }
-
 }
 
